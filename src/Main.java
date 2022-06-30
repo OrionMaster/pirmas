@@ -1,47 +1,29 @@
-//import java.sql.PreparedStatement;
-
-import java.util.ArrayList;
+import java.util.Scanner;
+import java.util.concurrent.ExecutionException;
 
 public class Main {
-    public static void main(String[] args) {
-        Student studentas = new Student();
-        studentas.age = 17;
-        studentas.name = "Juozapas";
-        studentas.surname = "Pavardenis";
-        studentas.grades.add(9);
-        studentas.grades.add(10);
-
-        System.out.println(studentas.name + " " + studentas.surname);
 
 
-        Student studentas2 = new Student();
-        studentas2.name = "Jonas";
-        studentas2.surname = "Jonaitis";
-        studentas2.age = 18;
-        System.out.println(studentas2.name + " " + studentas2.surname);
+        public static void main(String[] args){
+            Scanner sc = new Scanner(System.in);
+            System.out.println("Prasau pasakyk ka nors");
+            int inputInt = 0;
 
-
-        ArrayList<Student> students = new ArrayList<>();
-        students.add(studentas);
-        students.add(studentas2);
-
-        Student studentas3 = new Student( "Algis", "Raman", 54 );
-        students.add(studentas3);
-
-        for (int i = 0; i < students.size(); i++) {
-            Student student = students.get(i);
-            System.out.println(student.name + " " + student.surname + " ");
-            for (int a = 0; a < students.get(i).grades.size(); a++) {
-                int grade = student.grades.get(a);
-                System.out.println(students.get(i).grades.get(a) + ", ");
-                System.out.print(grade + ", ");
-
+            try {
+                inputInt = sc.nextInt();
+            }catch (Exception e){
+                System.out.println("wrong input format");
             }
-            System.out.println();
-    }
+
+            System.out.println("Labai gerai, tu pasakei " + inputInt);
+
+
+
+        }
+
+
+
+
+
 
     }
-}
-
-
-
